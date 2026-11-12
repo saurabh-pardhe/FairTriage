@@ -1,0 +1,30 @@
+How to use it
+1. Put fairtriage_generator.py in the same folder as Data_Pub.xlsx.
+2. Install the required libraries:
+pip install pandas openpyxl
+
+
+3. Run:
+python fairtriage_generator.py
+
+
+Control the number of vignettes
+You can change this setting near the top of the script:
+N_CASES = 20
+
+
+
+Or specify it when running:
+python fairtriage_generator.py --n-cases 50
+
+
+You can also choose random records instead of the first records:
+python fairtriage_generator.py --n-cases 20 --sample random --seed 42
+
+
+Other settings you can modify
+ETHNICITIES = ["White", "Black", "Asian", "Hispanic"]SOCIOECONOMIC_STATUSES = [    "Low income",    "High income",    "Unhoused"]INCLUDE_UNBIASED_CONTROL = True
+
+
+
+With 20 vignettes and the default settings, the script generates 260 rows (20 × 13). If you change the number of vignettes or demographic categories, it recalculates the output automatically.
